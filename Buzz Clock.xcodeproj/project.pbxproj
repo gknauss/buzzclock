@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
+		920CBB0011BEF13900DB29FB /* GKUtil Silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 920CBAFF11BEF13900DB29FB /* GKUtil Silence.wav */; };
+		920CBBD311C067EA00DB29FB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 920CBBD211C067EA00DB29FB /* Icon-Small.png */; };
+		9216166E11B831CD00549106 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9216166D11B831CD00549106 /* main.m */; };
+		9216167711B8321900549106 /* BuzzClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9216167611B8321900549106 /* BuzzClockAppDelegate.m */; };
+		9216167F11B8327300549106 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9216167E11B8327300549106 /* MainViewController.m */; };
+		9216168111B8328000549106 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9216168011B8328000549106 /* MainView.xib */; };
+		9216168411B8329100549106 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9216168311B8329100549106 /* FlipsideViewController.m */; };
+		9216168611B832A000549106 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9216168511B832A000549106 /* FlipsideView.xib */; };
+		9216169311B832E700549106 /* butt_buzz.png in Resources */ = {isa = PBXBuildFile; fileRef = 9216168D11B832E700549106 /* butt_buzz.png */; };
+		9216169411B832E700549106 /* butt_norm.png in Resources */ = {isa = PBXBuildFile; fileRef = 9216168E11B832E700549106 /* butt_norm.png */; };
+		9216169511B832E700549106 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9216168F11B832E700549106 /* Default.png */; };
+		9216169811B832E700549106 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9216169211B832E700549106 /* Icon.png */; };
+		9216169F11B8332200549106 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9216169E11B8332200549106 /* MainWindow.xib */; };
+		921C6573118B85FE00DE5039 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921C6572118B85FE00DE5039 /* AVFoundation.framework */; };
+		92230B9E11B32ECE00F47DE9 /* GKPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 92230B9D11B32ECE00F47DE9 /* GKPref.m */; };
+		92AE493911BA1C4D00CB6CE6 /* GKWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE493711BA1C4D00CB6CE6 /* GKWeb.m */; };
+		92AE497511BA235100CB6CE6 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 92AE497411BA235100CB6CE6 /* about.html */; };
+		92AE4AD811BAE9BD00CB6CE6 /* navi_buzz.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AE4AD711BAE9BD00CB6CE6 /* navi_buzz.png */; };
+		92CAC58811B0526700F76F02 /* GKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC58711B0526700F76F02 /* GKUtil.m */; };
+		92CB716D11BD596300FADED3 /* head_norm.png in Resources */ = {isa = PBXBuildFile; fileRef = 92CB716B11BD596300FADED3 /* head_norm.png */; };
+		92CB716E11BD596300FADED3 /* head_buzz.png in Resources */ = {isa = PBXBuildFile; fileRef = 92CB716C11BD596300FADED3 /* head_buzz.png */; };
+		92E9814E118A2374000694B8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9814D118A2374000694B8 /* AudioToolbox.framework */; };
+		92FD0E4D11B835E500FDFA0C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92FD0E4C11B835E500FDFA0C /* Entitlements.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* Buzz Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buzz Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765580DF743DE002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		920CBAFF11BEF13900DB29FB /* GKUtil Silence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "GKUtil Silence.wav"; path = "GKLib/GKUtil Silence.wav"; sourceTree = "<group>"; };
+		920CBBD211C067EA00DB29FB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		9216166D11B831CD00549106 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Code/main.m; sourceTree = "<group>"; };
+		9216167511B8321900549106 /* BuzzClockAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuzzClockAppDelegate.h; path = Code/Classes/BuzzClockAppDelegate.h; sourceTree = "<group>"; };
+		9216167611B8321900549106 /* BuzzClockAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuzzClockAppDelegate.m; path = Code/Classes/BuzzClockAppDelegate.m; sourceTree = "<group>"; };
+		9216167D11B8327300549106 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Code/Classes/MainViewController.h; sourceTree = "<group>"; };
+		9216167E11B8327300549106 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Code/Classes/MainViewController.m; sourceTree = "<group>"; };
+		9216168011B8328000549106 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView.xib; path = Xibs/MainView.xib; sourceTree = "<group>"; };
+		9216168211B8329100549106 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipsideViewController.h; path = Code/Classes/FlipsideViewController.h; sourceTree = "<group>"; };
+		9216168311B8329100549106 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipsideViewController.m; path = Code/Classes/FlipsideViewController.m; sourceTree = "<group>"; };
+		9216168511B832A000549106 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FlipsideView.xib; path = Xibs/FlipsideView.xib; sourceTree = "<group>"; };
+		9216168D11B832E700549106 /* butt_buzz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butt_buzz.png; sourceTree = "<group>"; };
+		9216168E11B832E700549106 /* butt_norm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butt_norm.png; sourceTree = "<group>"; };
+		9216168F11B832E700549106 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9216169211B832E700549106 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		9216169E11B8332200549106 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Xibs/MainWindow.xib; sourceTree = "<group>"; };
+		921C6572118B85FE00DE5039 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		92230B9C11B32ECE00F47DE9 /* GKPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKPref.h; path = GKLib/GKPref.h; sourceTree = "<group>"; };
+		92230B9D11B32ECE00F47DE9 /* GKPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKPref.m; path = GKLib/GKPref.m; sourceTree = "<group>"; };
+		928DB48511B8387900852F69 /* Buzz Clock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Buzz Clock-Info.plist"; sourceTree = "<group>"; };
+		92AE493611BA1C4D00CB6CE6 /* GKWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKWeb.h; path = GKLib/GKWeb.h; sourceTree = "<group>"; };
+		92AE493711BA1C4D00CB6CE6 /* GKWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKWeb.m; path = GKLib/GKWeb.m; sourceTree = "<group>"; };
+		92AE497411BA235100CB6CE6 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = Web/about.html; sourceTree = "<group>"; };
+		92AE4AD711BAE9BD00CB6CE6 /* navi_buzz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_buzz.png; sourceTree = "<group>"; };
+		92CAC58611B0526700F76F02 /* GKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKUtil.h; path = GKLib/GKUtil.h; sourceTree = "<group>"; };
+		92CAC58711B0526700F76F02 /* GKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKUtil.m; path = GKLib/GKUtil.m; sourceTree = "<group>"; };
+		92CB716B11BD596300FADED3 /* head_norm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_norm.png; sourceTree = "<group>"; };
+		92CB716C11BD596300FADED3 /* head_buzz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_buzz.png; sourceTree = "<group>"; };
+		92E9814D118A2374000694B8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		92FD0E4C11B835E500FDFA0C /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		92FD0E5011B8361C00FDFA0C /* Buzz Clock_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buzz Clock_Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
+				92E9814E118A2374000694B8 /* AudioToolbox.framework in Frameworks */,
+				921C6573118B85FE00DE5039 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Buzz Clock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		281C6CD70DB2D82200F60ACC /* Flipside View */ = {
+			isa = PBXGroup;
+			children = (
+				9216168511B832A000549106 /* FlipsideView.xib */,
+				9216168211B8329100549106 /* FlipsideViewController.h */,
+				9216168311B8329100549106 /* FlipsideViewController.m */,
+			);
+			name = "Flipside View";
+			sourceTree = "<group>";
+		};
+		289233A00DB2D0730083E9F9 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				9216168011B8328000549106 /* MainView.xib */,
+				9216167D11B8327300549106 /* MainViewController.h */,
+				9216167E11B8327300549106 /* MainViewController.m */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				92FD0E6C11B8369400FDFA0C /* Application Delegate */,
+				289233A00DB2D0730083E9F9 /* Main View */,
+				281C6CD70DB2D82200F60ACC /* Flipside View */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				92FD0E5011B8361C00FDFA0C /* Buzz Clock_Prefix.pch */,
+				9216166D11B831CD00549106 /* main.m */,
+				9291A9CD11B050D900AB5E29 /* GKKit */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				928DB48511B8387900852F69 /* Buzz Clock-Info.plist */,
+				92FD0E4C11B835E500FDFA0C /* Entitlements.plist */,
+				9216169E11B8332200549106 /* MainWindow.xib */,
+				92AE497611BA235A00CB6CE6 /* Web */,
+				9216168C11B832E700549106 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765580DF743DE002DB57D /* CoreGraphics.framework */,
+				92E9814D118A2374000694B8 /* AudioToolbox.framework */,
+				921C6572118B85FE00DE5039 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9216168C11B832E700549106 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				920CBBD211C067EA00DB29FB /* Icon-Small.png */,
+				9216169211B832E700549106 /* Icon.png */,
+				9216168F11B832E700549106 /* Default.png */,
+				92CB716B11BD596300FADED3 /* head_norm.png */,
+				92CB716C11BD596300FADED3 /* head_buzz.png */,
+				9216168E11B832E700549106 /* butt_norm.png */,
+				9216168D11B832E700549106 /* butt_buzz.png */,
+				92AE4AD711BAE9BD00CB6CE6 /* navi_buzz.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9291A9CD11B050D900AB5E29 /* GKKit */ = {
+			isa = PBXGroup;
+			children = (
+				920CBAFF11BEF13900DB29FB /* GKUtil Silence.wav */,
+				92CAC58611B0526700F76F02 /* GKUtil.h */,
+				92CAC58711B0526700F76F02 /* GKUtil.m */,
+				92230B9C11B32ECE00F47DE9 /* GKPref.h */,
+				92230B9D11B32ECE00F47DE9 /* GKPref.m */,
+				92AE493611BA1C4D00CB6CE6 /* GKWeb.h */,
+				92AE493711BA1C4D00CB6CE6 /* GKWeb.m */,
+			);
+			name = GKKit;
+			sourceTree = "<group>";
+		};
+		92AE497611BA235A00CB6CE6 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				92AE497411BA235100CB6CE6 /* about.html */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		92FD0E6C11B8369400FDFA0C /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9216167511B8321900549106 /* BuzzClockAppDelegate.h */,
+				9216167611B8321900549106 /* BuzzClockAppDelegate.m */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Buzz Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Buzz Clock" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Buzz Clock";
+			productName = "Sample App";
+			productReference = 1D6058910D05DD3D006BFB54 /* Buzz Clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Greg Knauss";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Buzz Clock" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Buzz Clock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9216168111B8328000549106 /* MainView.xib in Resources */,
+				9216168611B832A000549106 /* FlipsideView.xib in Resources */,
+				9216169311B832E700549106 /* butt_buzz.png in Resources */,
+				9216169411B832E700549106 /* butt_norm.png in Resources */,
+				9216169511B832E700549106 /* Default.png in Resources */,
+				9216169811B832E700549106 /* Icon.png in Resources */,
+				9216169F11B8332200549106 /* MainWindow.xib in Resources */,
+				92FD0E4D11B835E500FDFA0C /* Entitlements.plist in Resources */,
+				92AE497511BA235100CB6CE6 /* about.html in Resources */,
+				92AE4AD811BAE9BD00CB6CE6 /* navi_buzz.png in Resources */,
+				92CB716D11BD596300FADED3 /* head_norm.png in Resources */,
+				92CB716E11BD596300FADED3 /* head_buzz.png in Resources */,
+				920CBB0011BEF13900DB29FB /* GKUtil Silence.wav in Resources */,
+				920CBBD311C067EA00DB29FB /* Icon-Small.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92CAC58811B0526700F76F02 /* GKUtil.m in Sources */,
+				92230B9E11B32ECE00F47DE9 /* GKPref.m in Sources */,
+				9216166E11B831CD00549106 /* main.m in Sources */,
+				9216167711B8321900549106 /* BuzzClockAppDelegate.m in Sources */,
+				9216167F11B8327300549106 /* MainViewController.m in Sources */,
+				9216168411B8329100549106 /* FlipsideViewController.m in Sources */,
+				92AE493911BA1C4D00CB6CE6 /* GKWeb.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.9;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "Buzz Clock";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)_Prefix.pch";
+				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
+				PRODUCT_NAME = "Buzz Clock";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92396B9711B5C4E600B4F15B /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Plists/Info.plist;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Distribution;
+		};
+		92396B9811B5C4E600B4F15B /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Greg Knauss";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)_Prefix.pch";
+				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
+				PRODUCT_NAME = "Buzz Clock";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8519E58A-3326-492F-8712-9CEE2594625E";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Plists/Info.plist;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Plists/Info.plist;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Buzz Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				92396B9811B5C4E600B4F15B /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Buzz Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				92396B9711B5C4E600B4F15B /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
