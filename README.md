@@ -5,20 +5,20 @@ Buzz Clock -- A Silent Clock for the iPhone
 About
 -----
 
-*[Buzz Clock](http://buzzclockapp.com)* is a simple, discrete way to tell the
+**[Buzz Clock](http://buzzclockapp.com)** is a simple, discrete way to tell the
 time -- even when you can't take your phone out of your pocket. In interviews,
-on first dates, in church, or at school plays, *Buzz Clock* silently vibrates
+on first dates, in church, or at school plays, **Buzz Clock** silently vibrates
 at set intervals, so you'll always know what time it is.
 
 This distribution includes all the source code, images and metadata that went
-into *Buzz Clock*'s App Store submission. It uses Xcode and requires SDK 3.0
+into **Buzz Clock**'s App Store submission. It uses Xcode and requires SDK 3.0
 or above.
 
 
 License
 -------
 
-*Buzz Clock* is distributed under a [Creative Commons Attribution
+**Buzz Clock** is distributed under a [Creative Commons Attribution
 License](http://creativecommons.org/licenses/by/3.0/).  Go nuts.
 
 
