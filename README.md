@@ -1,4 +1,4 @@
-Buzz Clock --- A Silent Clock for the iPhone
+Buzz Clock -- A Silent Clock for the iPhone
 ==========
 
 
@@ -6,7 +6,7 @@ About
 -----
 
 **[Buzz Clock](http://buzzclockapp.com)** is a simple, discreet way to tell the
-time --- even when you can't take your phone out of your pocket. In interviews,
+time -- even when you can't take your phone out of your pocket. In interviews,
 on first dates, in church, or at school plays, **Buzz Clock** silently vibrates
 at set intervals, so you'll always know what time it is.
 
