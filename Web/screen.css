@@ -1,0 +1,7 @@
+#text { margin: 20px 20px 10px 20px; font-family: Arial; font-size: 17px; color: #222; }
+#head { margin: 40px 0 10px 0; width: 320px; height: 200px; background-size: 320px 200px; background-image: url(head_norm.png); }
+#navi { width: 280px; height: 225px; background-size: 280px 225px; background-image: url(navi_buzz.png); }
+.name { font-weight: bold; }
+.head { font-size: 24px; font-weight: bold; color: #000; }
+.ques { font-weight: bold; font-style: italic; color: #000; }
+.navi { font-weight: bold; color: #000; }

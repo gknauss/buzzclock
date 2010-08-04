@@ -1,16 +1,10 @@
 <html>
  <head>
-  <style>
-   #text { margin: 0px 20px 10px 20px; font-family: Arial; font-size: 17px; color: #222; }
-   #imag { margin: 40px 0 10px 0; width: 320px; height: 200px; }
-   .name { font-weight: bold; }
-   .head { font-size: 24px; font-weight: bold; color: #000; }
-   .ques { font-weight: bold; font-style: italic; color: #000; }
-   .navi { font-weight: bold; color: #000; }
-  </style>
+  <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
  </head>
  <body style="margin: 0; padding: 0; width: 320px;">
-  <img id="imag" src="head_norm.png" />
+  <div id="head"></div>
   <div id="text">
    <p>
     <span class="name">Buzz Clock</span> is a simple, discreet way to tell the time &mdash; even when you can&apos;t take your phone out of your pocket. In interviews, on first dates, in church, or at school plays, <span class="name">Buzz Clock</span> silently vibrates at set intervals, so you&apos;ll always know what time it is.
@@ -32,7 +26,7 @@
     <br />
     You need to have your iPhone set to allow vibration, controlled via the <span class="navi">Setup &#9654; Sounds</span> settings.
    </p>
-   <img src="navi_buzz.png" />
+   <div id="navi"></div>
    <p>
     Depending on the position of your Silent/Ring switch &mdash; the small, two-position switch on the side of your phone, next to the volume control &mdash; your phone may not be able to vibrate. Change the settings as appropriate, and <span class="name">Buzz Clock</span> will act as expected.
    </p>
