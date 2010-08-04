@@ -22,6 +22,25 @@ License
 License](http://creativecommons.org/licenses/by/3.0/).  Go nuts.
 
 
+Changes
+-------
+
+1.0.0
+
+	* Initial release.
+
+1.0.1
+
+	* OS 4.0: Compiled and tested with iOS 4.
+	* Retina Graphics: The graphics now show at full resolution on Retina
+	  displays.
+	* "Discreet": Fixed misspelling in Instructions.
+	* Buzz Pauses: Extended the pauses between buzzes from 0.075 seconds to
+	  0.250.
+	* Debug Log: Added a debug console to track application behavior during
+	  debugging.
+
+
 Caveat
 ------
 
