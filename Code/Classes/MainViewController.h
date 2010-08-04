@@ -12,9 +12,11 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
 	IBOutlet UIImageView *imageView;
-	IBOutlet UILabel *label;
+	IBOutlet UITextView *messagesView;
+	IBOutlet UIButton *infoButton;
 }
-@property (nonatomic,retain) UILabel *label;
+@property (nonatomic,retain) UITextView *messagesView;
+@property (nonatomic,retain) UIButton *infoButton;
 - (IBAction)showInfo;
-- (void)toggleMain;  // Oh, C derivatives. Prototypes for forward calls are so 1980s.
+- (void)setMain:(BOOL)flag;  // Oh, C derivatives. Prototypes for forward calls are so 1980s.
 @end

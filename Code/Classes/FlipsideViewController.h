@@ -18,6 +18,7 @@
 	id <FlipsideViewControllerDelegate> delegate;
 	IBOutlet UITableView *tableView;
 	GKWebViewController *instructionsController;
+	GKWebViewController *changelogController;
 }
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 @end

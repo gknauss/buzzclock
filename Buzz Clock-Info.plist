@@ -21,12 +21,14 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array><string>telephony</string></array>
+	<array>
+		<string>telephony</string>
+	</array>
 </dict>
 </plist>

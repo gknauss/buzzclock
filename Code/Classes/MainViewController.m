@@ -14,22 +14,38 @@
 
 @implementation MainViewController
 
-@synthesize label;
+@synthesize messagesView;
 
 // MainViewController delegates ************************************************
 
 // Creation and destruction ====================================================
-UIImage* stillImage;
-UIImage* buzzImage;
-FlipsideViewController* flipsideViewController;
-UINavigationController* flipsideNavigationController;
-NSTimer*                mainTimer;
-NSDateFormatter*        mainFormat;
-int                     mainInterval;
-NSTimer*                buzzTimer;
-int                     buzzTimes[3] = {5, 15, 30};
-int                     buzzFlags[4+(60/5)*2+1];
-int                     buzzIndex;
+UIImage                *stillImage;
+UIImage                *buzzImage;
+FlipsideViewController *flipsideViewController;
+UINavigationController *flipsideNavigationController;
+NSTimer*               mainTimer;
+NSDateFormatter        *mainFormat;
+int                    mainInterval;
+NSTimer                *buzzTimer;
+int                    buzzTimes[3] = {5, 15, 30};
+int                    buzzFlags[4+(60/5)*2+1];
+int                    buzzIndex;
+NSDateFormatter        *dateFormatter;
+
+@synthesize infoButton;
+
+- (void)addMessage:(NSString *)messageText {
+#ifdef DEBUG
+	messagesView.alpha = 1;
+	if (!dateFormatter)
+	{
+		dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setDateFormat:@"HH:mm:ss.SSS"];
+	}
+	messagesView.text = [NSString stringWithFormat:@"%@%@%@ %@",messagesView.text,[messagesView.text isEqualToString:@""]?@"":@"\n",[dateFormatter stringFromDate:[NSDate date]],messageText];
+	[messagesView scrollRangeToVisible:NSMakeRange([messagesView.text length],0)];
+#endif
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
@@ -71,7 +87,9 @@ int                     buzzIndex;
 	}
 
 	// Turn on the buzzing when the view becomes available
-	[self toggleMain];
+	[self setMain:YES];
+	
+	[self addMessage:[NSString stringWithFormat:@"Starting with interval: %d.",mainInterval]];
 }
 
 - (void)viewDidUnload {
@@ -87,6 +105,11 @@ int                     buzzIndex;
 	[flipsideViewController release];
 
 	[mainFormat release];
+
+	if (dateFormatter)
+	{
+		[dateFormatter release];
+	}
 	
     [super dealloc];
 }
@@ -94,8 +117,13 @@ int                     buzzIndex;
 // Button handling ==============================================================
 - (IBAction)showInfo {
 	
+	[self addMessage:@"Flipping to preferences."];
+	
+	// Change the button, so they know the tap took
+	[infoButton setEnabled:NO];
+	
 	// Don't buzz while we're showing the information view
-	[self toggleMain];
+	[self setMain:NO];
 	
 	// Flip to the information
 	[self presentModalViewController:flipsideNavigationController animated:YES];
@@ -103,14 +131,20 @@ int                     buzzIndex;
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
     
+	[self addMessage:@"Flipping back to main."];
+
+	// Unhide the button
+	[infoButton setEnabled:YES];
+
 	// Flip to the main view
 	[self dismissModalViewControllerAnimated:YES];
 	
 	// Turn buzzing back on
-	[self toggleMain];
+	[self setMain:YES];
 	
 	// Get any new interval value
 	mainInterval = [GKPref getPreferenceAsCInt:"interval"];
+	[self addMessage:[NSString stringWithFormat:@"Setting new interval: %d.",mainInterval]];
 }
 
 // Buzz handling ===============================================================
@@ -121,26 +155,20 @@ int                     buzzIndex;
 		if (buzzTimer) {
 			[buzzTimer invalidate];
 			buzzTimer = nil;
-#ifdef DEBUG
-			label.text = [NSString stringWithFormat:@"%@",[NSDate date]];
-#endif
 		}
+		[self addMessage:[NSString stringWithFormat:@"* Done (%d)",buzzIndex]];
 		return;
 	}
 	
 	// Buzz, and show the appropriate image
 	if (buzzFlags[buzzIndex]) {
 		imageView.image = buzzImage;
+		[self addMessage:[NSString stringWithFormat:@"* Buzzing (%d)",buzzIndex]];
 		AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-#ifdef DEBUG
-		label.text = @"Buzz!";
-#endif
 	}
 	else {
 		imageView.image = stillImage;
-#ifdef DEBUG
-			label.text = @"Pause...";
-#endif
+		[self addMessage:[NSString stringWithFormat:@"* Pausing (%d)",buzzIndex]];
 	}
 	
 	buzzIndex++;
@@ -148,6 +176,8 @@ int                     buzzIndex;
 
 - (void)startBuzz:(int)count {
 
+	[self addMessage:[NSString stringWithFormat:@"Starting buzzing with count: %d",count]];
+	
 	// Stop any current sequence
 	buzzIndex = 0;
 	buzzFlags[0] = -1;
@@ -162,7 +192,8 @@ int                     buzzIndex;
 	
 	// Start the timer
 	buzzIndex = 0;
-	buzzTimer = [NSTimer scheduledTimerWithTimeInterval:0.525 target:self selector:@selector(callbackBuzz)  userInfo:nil repeats:YES];
+	buzzTimer = [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(callbackBuzz) userInfo:nil repeats:YES];
+	[self addMessage:[NSString stringWithFormat:@"Timer: %@",buzzTimer]];
 }
 
 - (void)callbackMain {
@@ -175,6 +206,7 @@ int                     buzzIndex;
 	{
 		minuteLast = minuteCurrent;
 	}
+	[self addMessage:[NSString stringWithFormat:@"Main callback for %d",minuteCurrent]];
 	
 	// If we haven't already gone off on this minute and it's one we care about...
 	if ((minuteCurrent != minuteLast) &&
@@ -183,11 +215,12 @@ int                     buzzIndex;
 		minuteLast = minuteCurrent;
 
 		// Buzz, damn you!  Buzz!
+		[self addMessage:[NSString stringWithFormat:@"Starting to buzz for %d",minuteCurrent]];
 		[self startBuzz:minuteCurrent/buzzTimes[mainInterval]];
 	}
 }
 
-- (void)toggleMain {
+- (void)setMain:(BOOL)flag {
 	if (buzzTimer) {
 		[buzzTimer invalidate];
 		buzzTimer = nil;
@@ -196,9 +229,11 @@ int                     buzzIndex;
 		[mainTimer invalidate];
 		mainTimer = nil;
 	}
-	else {
+	
+	if (flag) {
 		mainTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(callbackMain) userInfo:nil repeats:YES];
 	}
+	[self  addMessage:[NSString stringWithFormat:@"Main timer: %@",mainTimer]];
 }
 
 @end

@@ -103,7 +103,7 @@ int prefInterval = 1;
 				case 2:
 					text = @"Version";
 					detail = [NSString stringWithFormat:@"%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
-					selectable = NO;
+					accessory = UITableViewCellAccessoryDisclosureIndicator;
 					break;
 				case 3:
 					text = @"Author";
@@ -140,6 +140,10 @@ int prefInterval = 1;
 				case 1:
 					[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://buzzclockapp.com"]];
 					break;
+				case 2:
+					[self.navigationController pushViewController:changelogController animated:YES];
+					[tableView2 deselectRowAtIndexPath:indexPath animated:NO];
+					break;
 			}
 			break;
 	}
@@ -152,11 +156,13 @@ int prefInterval = 1;
 	
 	prefInterval = [GKPref getPreferenceAsCInt:"interval" withDefault:1];
 	instructionsController = [[GKWebViewController alloc] initWithResource:@"about" andTitle:@"Instructions"];
+	changelogController = [[GKWebViewController alloc] initWithResource:@"change" andTitle:@"Versions"];
 }
 
 - (void)viewDidUnload {	
 	[super viewDidUnload];
 	[instructionsController release];
+	[changelogController release];
 }
 
 @end
